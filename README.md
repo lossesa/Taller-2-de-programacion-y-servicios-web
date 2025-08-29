@@ -1,1 +1,2 @@
-# Taller-2-de-programacion-y-servicios-web
+# Paradigmas de programación en JavaScript 
+# 
