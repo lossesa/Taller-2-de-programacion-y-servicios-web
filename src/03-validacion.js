@@ -12,6 +12,7 @@ function validar_email(email) {
     return emailRegex.test(email); // Se usa test para comprobar si email cumple con el patron de emailRegex.
 }
 
+console.log("\n ------ Validación de email: \n");
 let mi_email = prompt("Ingrese un correo electronico: ");
 if (validar_email(mi_email)) {
     console.log("El correo electrónico tiene un formato válido.");
@@ -44,6 +45,7 @@ function verificar_fortaleza(contraseña) {
 
 let resultado = ""; // Guarda el mensaje devuelto por la función.
 let password = ""; // Almacena lo que el usuario ingrese en el prompt.
+console.log("\n ------ Verificar fortaleza de la contraseña: \n");
 
 // El bucle se repite hasta que la contraseña sea fuerte
 while (true) {
@@ -72,6 +74,7 @@ function verificar_edad(edad){
     return mensaje;
 }
 
+console.log("\n ------ Verificar edad valida: \n");
 let edad = parseInt(prompt("Ingresa tu edad: "));
 console.log(verificar_edad(edad));
 
@@ -79,7 +82,7 @@ console.log(verificar_edad(edad));
 
 
 // FUNCION 4: válida objeto producto completo
-function validarProducto(producto) {
+function validar_producto(producto) {
     if (typeof producto !== "object" || producto === null) {
         return "Error: El producto no es un objeto válido.";
     }
@@ -103,6 +106,7 @@ function validarProducto(producto) {
     return "✅ Producto válido.";
 }
 
+console.log("\n ------ Validación producto completo:\n");
 let producto = {
     nombre: "Laptop Gamer",
     precio: 2000,
@@ -110,4 +114,16 @@ let producto = {
     categoria: "tecnologia"
 };
 
-console.log(validarProducto(producto));
+let producto_dos = {
+    nombre: "Laptop Gamer",
+    precio: 2000,
+    stock: 0,
+    categoria: ""
+    
+}
+console.log("\nProducto uno: ", validar_producto(producto));
+console.log("\nProducto dos: ", validar_producto(producto_dos))
+
+
+
+

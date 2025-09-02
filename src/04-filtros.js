@@ -15,9 +15,9 @@ const products = [
 // 1) Filtra productos por rango de precio (min, max)
 const min = Number(prompt("Ingrese el precio mínimo (1 a 999): "));
 const max = Number(prompt("Ingrese el precio máximo ( 1 a 999): "));
-
 const caso_uno = products.filter(product => product.price >= min && product.price <= max).sort((a,b) => a.price - b.price);
 console.log("\nProductos en el rango y ordenados: ", caso_uno);
+
 
 
 // 2) Agrupa productos por categoría.
@@ -34,16 +34,15 @@ const caso_dos = products.reduce((acumulador, product) => {
     acumulador[categoria].push(product);
     return acumulador;
 }, {});
-
 console.log("\nAgrupar por categoria: ",caso_dos);
 
 
 
 // 3) Encuentra productos de una marca específica.
 const marca = prompt("Ingresa la marca: ").toLowerCase();
-
 const caso_tres = products.filter(product => product.brand.toLowerCase() === marca);
 console.log("\nFiltrar por marca: ", caso_tres)
+
 
 
 // 4) Calcula estadísticas por categoría (promedio, total, cantidad)
@@ -61,3 +60,6 @@ const caso_cuatro = products.reduce((acumulador, product) => {
     return acumulador;
 }, {});
 console.log("\nEstadísticas por categoría: ", caso_cuatro);
+
+
+

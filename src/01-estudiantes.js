@@ -14,7 +14,6 @@ const students = [
     {id: 5, name: "Sofia", age: 20, grade: 95, course: "JavaScript"}
 ];
 
-console.log("\n ----------- FUNCIONAL ----------");
 
 // 1) Encontrar todos los estudiantes de JS con nota mayor a 80.
 const caso_uno = students.filter(student => student.grade > 80 && student.course === "JavaScript").map(student => student.name);
@@ -37,11 +36,25 @@ const caso_cuatro = students.map(student => student.grade);
 const mayor_nota = Math.max(...caso_cuatro); // Uso de spread operator: Convierte un array [ 2,4,5] en 2,3,5. 
 const estudiante = students.find(student => student.grade === mayor_nota);
 const nombre_estudiante = estudiante.name;
-console.log("\nEstudiante con la  nota mayor: ", estudiante);
-console.log("\nEstudiante con la  nota mayor: ", nombre_estudiante);
+// console.log("\nEstudiante con la  nota mayor: ", estudiante);
+// console.log("\nEstudiante con la  nota mayor: ", nombre_estudiante);
 
 
 // Forma 2:
 const topStudent = students.reduce((max, student) =>
     student.grade > max.grade ? student : max
 );
+
+
+
+// Exportar modulo
+module.exports = {
+    students,
+    caso_uno,
+    caso_dos,
+    caso_tres,
+    caso_cuatro,
+    mayor_nota,
+    estudiante,
+    nombre_estudiante
+}

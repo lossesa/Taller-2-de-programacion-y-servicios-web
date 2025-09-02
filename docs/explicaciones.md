@@ -32,7 +32,21 @@
 
 
 # 7. Redondear en JS. 
-# math.round, math.floor, math.ceil, toFixed.
+# math.round --> Redondeo al numero entero mas cercano. 
+# math.floor --> Redondeo hacia abajo.
+# math.ceil --> Redondeo hacia arriba.
+# toFixed --> +(product.price ** 0.19).toFixed(2) esto abrevia a dos decimales.
+
 
 # 8. Agregar campo a un array 
-# forEach, map.
+# forEach: recorre cada objeto y le asigna un nuevo campo, pero modificar el array original.
+# map(): Se usa map para crear un nuevo array con el nuevo campo.
+
+
+
+# 9. Operador ternario
+# Uso de ? para reemplazar if-else en una sola linea.
+# condición ? valor_si_verdadero : valor_si_falso
+# condicion: se evalua como true o false.
+# ?: separa la condicion del valor que se devuelve si la condicion es verdadera.
+# : separa el valor verdadero del valor que se devuelve si la condicion es falsa.
